@@ -1,31 +1,56 @@
+<style>
+  @import url("./assets/css/default.css");
+  #start, #app {
+    height: 100vh;
+  }
+
+  #start {
+    background-color: rgb(0,0,0);
+    color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+</style>
+
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <section v-if="isBegin" id="start">
+    <IncludeTitle />
+    <p>O evento feito para você, calouro!</p>
+    <a @click="changeBeginState">Iniciar</a>
+  </section>
+
+  <section v-else id="app">
+    <IncludeHeader />
+    <router-view></router-view>
+    <IncludeFooter />
+  </section>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+import IncludeTitle from '@/components/IncludeTitle.vue';
+import IncludeHeader from '@/components/IncludeHeader.vue';
+import IncludeFooter from '@/components/IncludeFooter.vue';
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+  components: {
+    IncludeTitle,
+    IncludeHeader,
+    IncludeFooter,
+  },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data() {
+    return {
+      isBegin: false,
+    };
+  },
+
+  methods: {
+    changeBeginState() {
+      this.isBegin = (this.isBegin) ? false : this.isBegin;
+    },
+  },
+};
+
+</script>
