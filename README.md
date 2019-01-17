@@ -1,29 +1,30 @@
 # include
 
-## Project setup
+Include is an event organized by PET Computação to introduce UFC to new students.
+
+## Build
+
+First, you need install nodejs and npm. After do this, you open your terminal, access project folder and type:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+So, if you want test app, type this for development enviroment:
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+and this for production enviroment:
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
+You can verify if exist errors typing:
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Contributing
+
+## License
