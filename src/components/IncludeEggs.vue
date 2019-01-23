@@ -73,13 +73,14 @@
 
   #pets-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
   }
 
   .pets-items {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    margin: 0 10px;
   }
 
   .pets-items h1 {
@@ -95,21 +96,20 @@
     display: inline-block;
   }
 
-  .green-egg {
-    background-image: url("../assets/imgs/green-1.png");
-    animation: changeGreenEgg 2s linear forwards infinite;
-  }
-
-  .blue-egg {
+  .egg-ec {
     background-image: url("../assets/imgs/blue-1.png");
     animation: changeBlueEgg 2s linear forwards infinite;
   }
 
-  .yellow-egg {
+  .egg-cc {
+    background-image: url("../assets/imgs/green-1.png");
+    animation: changeGreenEgg 2s linear forwards infinite;
+  }
+
+  .egg-et {
     background-image: url("../assets/imgs/yellow-1.png");
     animation: changeYellowEgg 2s linear forwards infinite;
   }
-
   /* eggs stuffs end */
 
 </style>
@@ -117,18 +117,18 @@
 <template>
   <section id="pets-container">
 
-    <section class="pets-items cc">
-      <section class="egg green-egg"></section>
-      <h1>Ciência da Computação</h1>
-    </section>
-
-    <section class="pets-items ec">
-      <section class="egg blue-egg"></section>
+    <section class="pets-items">
+      <section class="egg egg-ec"></section>
       <h1>Engenharia da Computação</h1>
     </section>
 
-    <section class="pets-items et">
-      <section class="egg yellow-egg"></section>
+    <section class="pets-items">
+      <section class="egg egg-cc"></section>
+      <h1>Ciência da Computação</h1>
+    </section>
+
+    <section class="pets-items">
+      <section class="egg egg-et"></section>
       <h1>Engenharia de Telecomunicação</h1>
     </section>
 
