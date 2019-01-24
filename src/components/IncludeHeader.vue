@@ -35,12 +35,12 @@
    }
 
    .nav-items {
+     display: inline-block;
      margin: 0 10px;
      font-size: .7em;
      color: rgb(227,233,218);
    }
   /* navbar rules end */
-
 </style>
 
 <template>
@@ -61,14 +61,31 @@
     <nav class="nav">
       <router-link class="nav-items" to="/">Include</router-link>
       <router-link class="nav-items" to="/programming">Programação</router-link>
-      <router-link class="nav-items" to="support">Apoio</router-link>
-      <router-link class="nav-items" to="/certificates">Certificados</router-link>
+      <router-link class="nav-items" to="/map">Mapa</router-link>
+      <IncludeDropdown
+        :dropdown-title="dropdownTitle"
+        :dropdown-links="dropdownItems"
+      />
     </nav>
   </header>
 </template>
 
 <script>
-export default {
+import IncludeDropdown from './IncludeDropdown.vue';
 
+export default {
+  components: {
+    IncludeDropdown,
+  },
+
+  data() {
+    return {
+      dropdownTitle: 'Mais',
+      dropdownItems: [
+        { name: 'Adote', path: '/adopt' },
+        { name: 'Apoio', path: '/support' },
+      ],
+    };
+  },
 };
 </script>

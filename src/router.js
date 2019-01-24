@@ -24,12 +24,17 @@ export default new Router({
     {
       path: '/support',
       name: 'support',
-      component: () => import(/* webpackChunkName: "programming" */ './views/Support.vue'),
+      component: () => import(/* webpackChunkName: "support" */ './views/Support.vue'),
     },
     {
       path: '/certificates',
       name: 'certificates',
-      component: () => import(/* webpackChunkName: "programming" */ './views/Certificates.vue'),
+      component: () => import(/* webpackChunkName: "certificates" */ './views/Certificates.vue'),
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: () => import(/* webpackChunkName: "map" */ './views/Map.vue'),
     },
   ],
 });
