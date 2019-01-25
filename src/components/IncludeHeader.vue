@@ -81,21 +81,15 @@
       <router-link class="nav-items" to="/">Include</router-link>
       <router-link class="nav-items" to="/programming">Programação</router-link>
       <router-link class="nav-items" to="/map">Mapa</router-link>
-      <IncludeDropdown
-        :dropdown-title="dropdownTitle"
-        :dropdown-links="dropdownItems"
-      />
+      <router-link class="nav-items" to="/support">Apoio</router-link>
     </nav>
   </header>
 </template>
 
 <script>
-import IncludeDropdown from './IncludeDropdown.vue';
 
 export default {
-  components: {
-    IncludeDropdown,
-  },
+
 
   data() {
     return {

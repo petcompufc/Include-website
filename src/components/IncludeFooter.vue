@@ -7,6 +7,7 @@
     text-align: left;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -32,6 +33,13 @@
     text-decoration: underline;
   }
 
+  .footer-address-imgs {
+    width: 200px;
+    height: 61px;
+    display: block;
+    margin: 10px 0;
+  }
+
   .social-media-container {margin-top: 10px;}
   .social-media-items {margin-right: 10px;}
 
@@ -49,7 +57,10 @@
 <template>
   <footer id="include-footer">
     <section class="footer-address">
-      <!-- <img class="footer-address-items" src="../assets/imgs/logo-pet.png" alt="PET Computação logo" /> -->
+      <section class="footer-address-items">
+        <img class="footer-address-imgs" src="../assets/imgs/logo-pet.png" alt="PET Computação logo" />
+        <img class="footer-address-imgs" src="../assets/imgs/logo-ufc.png" alt="UFC logo">
+      </section>
       <section class="footer-address-items">
         <h1>PET Computação</h1>
         <address>
