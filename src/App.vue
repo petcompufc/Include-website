@@ -29,7 +29,6 @@
 </template>
 
 <script>
-
 import IncludeTitle from '@/components/IncludeTitle.vue';
 import IncludeHeader from '@/components/IncludeHeader.vue';
 import IncludeFooter from '@/components/IncludeFooter.vue';
