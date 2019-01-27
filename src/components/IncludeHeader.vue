@@ -79,9 +79,8 @@
 
     <nav class="nav">
       <router-link class="nav-items" to="/">Include</router-link>
-      <router-link class="nav-items" to="/programming">Programação</router-link>
+      <router-link class="nav-items" to="/schedule/wednesday">Programação</router-link>
       <router-link class="nav-items" to="/map">Mapa</router-link>
-      <router-link class="nav-items" to="/support">Apoio</router-link>
     </nav>
   </header>
 </template>

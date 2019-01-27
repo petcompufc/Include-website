@@ -24,7 +24,7 @@
 
 <script>
 
-import locations from '../utils/locations';
+import locations from '../models/locations';
 import {
   createMap,
   createIncludeIcon,

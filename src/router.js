@@ -14,17 +14,12 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/programming',
-      name: 'programming',
+      path: '/schedule/:day',
+      name: 'schedule',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "programming" */ './views/Programming.vue'),
-    },
-    {
-      path: '/support',
-      name: 'support',
-      component: () => import(/* webpackChunkName: "support" */ './views/Support.vue'),
+      component: () => import(/* webpackChunkName: "programming" */ './views/Schedule.vue'),
     },
     {
       path: '/certificates',
