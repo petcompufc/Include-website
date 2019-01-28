@@ -3,7 +3,7 @@ import instagram from '../assets/imgs/social-media/instagram-logo.png';
 import github from '../assets/imgs/social-media/github-logo.png';
 
 const contactInfos = {
-  contributing: 'Encontrou algum bug no site? Abra um Pull Request no Github!',
+  contributing: 'Ajude-nos a melhorar!',
 
   copyright: '© 2019 PET Computação UFC, Todos os direitos reservados.',
 

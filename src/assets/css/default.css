@@ -12,10 +12,10 @@ html { box-sizing: border-box }
 }
 
 body {
-  font-size: 18px;
+  font-size: 12px;
   font-family: "Comfortaa";
 }
 
 h1 { font-size: 2.5em;}
-p { font-size: 1.2em; text-align: justify }
-h1, img { text-align: center }
+p { font-size: 1.6em; text-align: justify }
+h1 { text-align: center }

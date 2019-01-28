@@ -1,4 +1,5 @@
 <style scoped>
+  /* egg animation */
   @keyframes changeGreenEgg {
     0% {
       background-image: url("../assets/imgs/yoshi/red1.png");
@@ -71,20 +72,29 @@
     }
   }
 
-  .egg-items {
-    width: 120px;
-    height: 120px;
+  /* egg rules */
+  .egg-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .egg-subitems section {
+  .egg-items {
+    max-width: 180px;
+    max-height: 180px;
+    margin: 25px;
+  }
+
+  .egg-items section {
     width: 60px;
     height: 60px;
     margin: 0 auto;
   }
 
-  .egg-subitems h1 {
-    font-size: 12px;
+  .egg-items h1 {
+    font-size: 1em;
   }
+  /* egg options color rules */
 
   .blue {
     background-image: url("../assets/imgs/yoshi/blue1.png");
@@ -104,8 +114,12 @@
 </style>
 
 <template>
-  <section class="egg-items">
-    <section class="egg-subitems">
+  <section class="egg-container">
+    <section 
+      v-for="(team, index) in teams"
+      :key="index"
+      class="egg-items"
+    >
       <section :class="team.type"></section>
       <h1>{{ team.name }}</h1>
     </section>
@@ -115,8 +129,8 @@
 <script>
 export default {
   props: {
-    team: {
-      type: Object,
+    teams: {
+      type: Array,
       required: true,
     },
   },

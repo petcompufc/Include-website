@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import IncludeMap from '../components/IncludeMap.vue';
+import IncludeMap from '@/components/IncludeMap.vue';
 
 export default {
   components: {

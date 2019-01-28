@@ -33,6 +33,7 @@ export const activitiesReview = {
 
 export const participants = {
   mainTitle: 'Organizadores',
+  description: 'Nós, PET Computação em parceria com os PET de Engenharia da Computação e Engenharia de Telecomunicação organizamos esse evento especialmente para você, calouro desses cursos.',
   teams: [
     {
       name: 'Engenharia da Computação',
