@@ -1,43 +1,50 @@
-export const include = () => ({
-  title: '',
-  text: '',
-});
+import talks from '../assets/imgs/talks.png';
+import games from '../assets/imgs/games.png';
+import adopt from '../assets/imgs/adopt.png';
 
-export const activitiesReview = (path = '@/assets/imgs/') => ({
-  srcPath: path,
+export const include = {
+  title: 'Include',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
+};
+
+export const activitiesReview = {
+  mainTitle: 'Atividades do Include',
   activities: [
     {
-      title: '',
-      sprite: '',
-      text: '',
+      title: 'Apresentações',
+      sprite: talks,
+      alt: 'Balão de Quadrinhos',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
     },
     {
-      title: '',
-      sprite: '',
-      text: '',
+      title: 'Gincanas',
+      sprite: games,
+      alt: 'Video game portátil',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
     },
     {
-      title: '',
-      sprite: '',
-      text: '',
+      title: 'Adoção',
+      sprite: adopt,
+      alt: 'Ícone de um bebê',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
     },
   ],
-});
+};
 
-export const participants = (path = '@/assets/imgs/yoshi/') => ({
-  spritePath: path,
-  team: [
+export const participants = {
+  mainTitle: 'Organizadores',
+  teams: [
     {
       name: 'Engenharia da Computação',
-      sprites: ['blue1.png', 'blue2.png', 'blue3.png', 'blue4.png', 'blue5.png', 'blue6.png', 'blue7.png'],
+      type: 'blue',
     },
     {
       name: 'Ciência da Computação',
-      sprites: ['red1.png', 'red2.png', 'red3.png', 'red4.png', 'red5.png', 'red6.png', 'red7.png'],
+      type: 'red',
     },
     {
       name: 'Engenharia de Telecomunicações',
-      sprites: ['yellow1.png', 'yellow2.png', 'yellow3.png', 'yellow4.png', 'yellow5.png', 'yellow6.png', 'yellow7.png'],
+      type: 'yellow',
     },
   ],
-});
+};

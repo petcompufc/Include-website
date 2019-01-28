@@ -4,14 +4,6 @@
     height: 100vh;
   }
 
-  #start {
-    background-color: rgb(0,0,0);
-    color: rgb(255, 255, 255);
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-  }
 </style>
 
 <template>

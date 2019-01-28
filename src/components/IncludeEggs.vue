@@ -71,73 +71,55 @@
     }
   }
 
-  #pets-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  .egg-items {
+    width: 120px;
+    height: 120px;
   }
 
-  .pets-items {
-    max-width: 200px;
-    margin: 0 10px;
-  }
-
-  .pets-items h1 {
-    margin: 0;
-    font-size: .5em;
-  }
-
-  /* eggs stuffs start */
-
-  .egg {
+  .egg-subitems section {
     width: 60px;
     height: 60px;
-    display: inline-block;
+    margin: 0 auto;
   }
 
-  .egg-ec {
+  .egg-subitems h1 {
+    font-size: 12px;
+  }
+
+  .blue {
     background-image: url("../assets/imgs/yoshi/blue1.png");
     animation: changeBlueEgg 2s linear forwards infinite;
   }
 
-  .egg-cc {
+  .red {
     background-image: url("../assets/imgs/yoshi/red1.png");
     animation: changeGreenEgg 2s linear forwards infinite;
   }
 
-  .egg-et {
+  .yellow {
     background-image: url("../assets/imgs/yoshi/yellow1.png");
     animation: changeYellowEgg 2s linear forwards infinite;
   }
-  /* eggs stuffs end */
 
 </style>
 
 <template>
-  <section id="pets-container">
-
-    <section class="pets-items">
-      <section class="egg egg-ec"></section>
-      <h1>Engenharia da Computação</h1>
+  <section class="egg-items">
+    <section class="egg-subitems">
+      <section :class="team.type"></section>
+      <h1>{{ team.name }}</h1>
     </section>
-
-    <section class="pets-items">
-      <section class="egg egg-cc"></section>
-      <h1>Ciência da Computação</h1>
-    </section>
-
-    <section class="pets-items">
-      <section class="egg egg-et"></section>
-      <h1>Engenharia de Telecomunicação</h1>
-    </section>
-
   </section>
 </template>
 
 <script>
 export default {
-
+  props: {
+    team: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 
 </script>

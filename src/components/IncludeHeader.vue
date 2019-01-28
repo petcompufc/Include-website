@@ -1,11 +1,4 @@
 <style scoped>
-  #include-header {
-    background-color: rgb(0,0,0);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   /* logo img rules start */
   .logo {
     margin-left: 50px;
@@ -13,6 +6,7 @@
   }
 
   .logo svg {
+    min-height: 80px;
     max-height: 100px;
   }
 
@@ -37,29 +31,35 @@
     transform: translate(2%, -2%);
   }
 
-  /* logo img rules end */
-
   .triangle-one {fill:#E3E9DA}
   .triangle-two {fill:#888C88}
 
-  /* navbar rules start */
-  .nav {
-     margin-right: 50px;
-   }
+  /* logo img rules end */
 
-   .nav-items {
-     display: inline-block;
-     margin: 0 10px;
-     font-size: .7em;
-     color: rgb(227,233,218);
-   }
-  /* navbar rules end */
+  #include-header {
+    background-color: rgb(0,0,0);
+    height: 120px;
+    box-shadow: 5px 5px 5px rgb(214,214,214);
+  }
+
+  #include-header, .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-items {
+    margin: 0 10px;
+    color: rgb(214,214,214);
+    text-decoration: none;
+  }
+
 </style>
 
 <template>
   <header id="include-header">
     <router-link class="logo" to="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" preserveAspectRatio="xMidyMid meet">
         <g class="logo-group">
           <g class="top-triangle">
             <polygon class="triangle-one" points="50.3,60.5 117.8,71.5 140.9,136.5" />
@@ -70,8 +70,8 @@
             <polygon class="triangle-two" points="242.8,177 262.3,240.3 173.6,162.5" />
           </g>
           <g class="left-triangle">
-          <polygon class="triangle-one" points="112.2,287.5 88.9,224.9 135.9,173.4" />
-          <polygon class="triangle-two" points="88.9,224.9 22.5,210.3 135.9,173.4" />
+            <polygon class="triangle-one" points="112.2,287.5 88.9,224.9 135.9,173.4" />
+            <polygon class="triangle-two" points="88.9,224.9 22.5,210.3 135.9,173.4" />
           </g>
         </g>
       </svg>
@@ -86,18 +86,3 @@
 </template>
 
 <script>
-
-export default {
-
-
-  data() {
-    return {
-      dropdownTitle: 'Mais',
-      dropdownItems: [
-        { name: 'Adote', path: '/adopt' },
-        { name: 'Apoio', path: '/support' },
-      ],
-    };
-  },
-};
-</script>
