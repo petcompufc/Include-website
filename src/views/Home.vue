@@ -1,9 +1,17 @@
 <style scoped>
   /* general rules */
-  article, .activities-content {
+  article,
+  #what-is-container,
+  #activities-container,
+  #participants-container,
+  #activities-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  #what-is-container, #participants-container p {
+    max-width: 400px;
   }
 
   /* article rules */
@@ -19,66 +27,71 @@
   }
 
   article h1 { margin: 50px 0 }
-
-  /* what-is rules */
-  .what-is-container { max-width: 400px }
+  article p { text-align: justify; }
 
   /* activities rules */
-  .activities-content {
-    flex-wrap: wrap;
+
+  #activities-list {
+    flex-flow: row wrap;
   }
 
-  .activities-items {
+  .activities-list-items {
     background-color: rgb(255,255,255);
     color: rgb(0,0,0);
-    max-width: 350px;
-    min-height: 350px;
+    max-width: 300px;
+    height: 320px;
     margin: 20px;
-    padding: 10px 30px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color .4s ease;
+    font-size: .9em;
     text-align: center;
-    transition: background-color .2s ease;
   }
 
-  .activities-items:hover {
-    background-color: rgb(223,227,238);
+  .activities-list-items h1 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
   }
 
-  /* participants rules */
-  .participants-container p {
-    /* max-width: 400px; */
-    /* margin: 20px auto; */
+  .activities-list-items p {
+    margin-top: 10px;
   }
+
+  .activities-list-items:hover {
+    background-color: rgb(214,214,214);
+  }
+
 </style>
 
 <template>
   <section id="home-container">
 
     <article>
-      <section class=" what-is-container">
+      <section id="what-is-container">
         <IncludeTitle />
         <p>{{ include.text }}</p>
       </section>
     </article>
 
     <article>
-      <section class="activities-container">
+      <section id="activities-container">
         <h1>{{ activities.mainTitle }}</h1>
-        <section class="activities-content">
-          <section
+        <ul id="activities-list">
+          <li
             v-for="(act, index) in activities.activities"
             :key="index"
-            class="activities-items"
+            class="activities-list-items"
           >
+            <h1>{{ act.title }}</h1>
             <img :src="act.sprite" :alt="act.alt" />
             <p>{{ act.text }}</p>
-          </section>
-        </section>
+          </li>
+        </ul>
       </section>
     </article>
 
     <article>
-      <section class="participants-container">
+      <section id="participants-container">
         <h1>{{ participants.mainTitle }}</h1>
         <p>{{ participants.description }}</p>
         <IncludeEggs :teams="participants.teams" />

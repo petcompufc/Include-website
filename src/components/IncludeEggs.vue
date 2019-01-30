@@ -77,6 +77,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 50px 0;
   }
 
   .egg-items {
@@ -115,7 +116,7 @@
 
 <template>
   <section class="egg-container">
-    <section 
+    <section
       v-for="(team, index) in teams"
       :key="index"
       class="egg-items"

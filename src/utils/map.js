@@ -99,3 +99,24 @@ export function addPopupInMarkers(markers) {
   markers.forEach(elem => elem.mkr.bindPopup(elem.description));
   return true;
 }
+
+export function flyToPos(map, latLong, zoom = 19) {
+  if (!Array.isArray(latLong)) return false;
+
+  map.flyTo(latLong, zoom);
+  return true;
+}
+
+export function isPopupOn(marker) {
+  return marker.isPopupOpen();
+}
+
+export function showPopup(marker) {
+  marker.openPopup();
+  return isPopupOn(marker);
+}
+
+export function finishPopup(marker) {
+  marker.closePopup();
+  return !isPopupOn(marker);
+}

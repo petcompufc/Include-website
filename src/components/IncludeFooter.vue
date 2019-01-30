@@ -1,18 +1,21 @@
 <style scoped>
   /* general rules */
-  #include-footer ul {
-    list-style: none;
-  }
 
-  #include-footer a {
-    text-decoration: none;
-    color: rgb(255,255,255);
-  }
+  footer a { text-decoration: underline; color: rgb(255,255,255) }
 
-  #include-footer h1 {
+  footer h1 {
     text-align: justify;
-    font-size: 1.8em;
+    font-size: 1em;
     margin-bottom: 20px;
+  }
+
+  footer li, footer address { font-size: .8em; margin-bottom: 8px }
+  @media (max-width: 699px) { footer li, footer h1 { text-align: center } }
+
+  #contributing-container, #address-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* contributing rules */
@@ -20,9 +23,6 @@
     background-color: rgb(177,69,68);
     color: rgb(255,255,255);
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   #contributing-container a {
@@ -32,18 +32,15 @@
   }
 
   /* address rules */
-
   #address-container {
-    background-color: rgb(0,0,0);
-    color: rgb(255,255,255);
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px;
+    padding: 50px 0;
   }
 
-  .address-items { font-size: 1em; margin: 10px 40px; height: 200px; width: 200px; }
+  .address-items {
+    min-height: 160px;
+    margin: 15px 80px;
+  }
 
   .logos-container {
     width: 200px;
@@ -59,12 +56,12 @@
     text-align: center;
     background-color: rgb(13,37,76);
     color: rgb(255,255,255);
+    padding: 10px;
   }
 </style>
 
 <template>
-  <footer id="include-footer">
-
+  <footer>
     <section id="contributing-container">
       <img :src="contributing.src" alt="github logo" />
       <a :href="contributing.url" target="_blank">{{ contributing.text }}</a>

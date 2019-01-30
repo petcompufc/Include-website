@@ -4,7 +4,7 @@ import adopt from '../assets/imgs/adopt.png';
 
 export const include = {
   title: 'Include',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
+  text: 'O Include é um evento feito para você que esta ingressando nos cursos de Ciência da Computação, Engenharia da Computação e Engenharia de Telecomunicações e gostaria de conhecer um pouco mais sobre o Campus e as atividades realizada pelo seu curso.',
 };
 
 export const activitiesReview = {
@@ -14,19 +14,19 @@ export const activitiesReview = {
       title: 'Apresentações',
       sprite: talks,
       alt: 'Balão de Quadrinhos',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
+      text: 'Conheça seu curso e seus novos companheiros de turma. Saiba quais as entidades acadêmica presentes em seu curso e quais atividades elas desempenham.',
     },
     {
       title: 'Gincanas',
       sprite: games,
       alt: 'Video game portátil',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
+      text: 'Trabalhe em equipe com seus colegas de turma para resolver enigmas e conhecer o campus.',
     },
     {
       title: 'Adoção',
       sprite: adopt,
       alt: 'Ícone de um bebê',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat nunc. Nulla augue leo, consequat non ligula ac, dictum accumsan purus. Integer pulvinar tincidunt risus, ac consequat lectus vestibulum vel. Duis sed mauris vel enim suscipit malesuada. Morbi mollis imperdiet tempus.',
+      text: 'Sente-se preocupado com as cadeiras? Escolha um veterano para lhe ajudar nessa nova jornada acadêmica.',
     },
   ],
 };

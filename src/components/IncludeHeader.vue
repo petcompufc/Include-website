@@ -1,7 +1,7 @@
 <style scoped>
   /* logo img rules start */
   .logo {
-    margin-left: 50px;
+    margin-left: 20px;
     transition: transform .5s ease-in-out;
   }
 
@@ -36,22 +36,10 @@
 
   /* logo img rules end */
 
-  #include-header {
-    background-color: rgb(0,0,0);
-    height: 120px;
-    box-shadow: 5px 5px 5px rgb(214,214,214);
-  }
-
   #include-header, .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .nav-items {
-    margin: 0 10px;
-    color: rgb(214,214,214);
-    text-decoration: none;
   }
 
 </style>
@@ -77,12 +65,26 @@
       </svg>
     </router-link>
 
-    <nav class="nav">
-      <router-link class="nav-items" to="/">Include</router-link>
-      <router-link class="nav-items" to="/schedule/wednesday">Programação</router-link>
-      <router-link class="nav-items" to="/map">Mapa</router-link>
-    </nav>
+    <IncludeNavbar :nav-items="navItems" limit-rule="(max-width: 500px)" />
   </header>
 </template>
 
 <script>
+import IncludeNavbar from './IncludeNavbar.vue';
+
+export default {
+  components: {
+    IncludeNavbar,
+  },
+
+  data() {
+    return {
+      navItems: [
+        { path: '/', name: 'Include', },
+        { path: '/schedule/wednesday', name: 'Programação' },
+        { path: '/map', name: 'Mapa' },
+      ],
+    };
+  },
+};
+</script>
