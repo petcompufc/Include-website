@@ -18,7 +18,7 @@
   article {
     box-shadow: 1px 6px 5px rgb(214,214,214);
     flex-direction: column;
-    padding: 100px 50px;
+    padding: 100px 15px;
   }
 
   article:nth-child(2n) {

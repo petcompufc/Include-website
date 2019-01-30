@@ -42,11 +42,6 @@
     margin: 15px 80px;
   }
 
-  .logos-container {
-    width: 200px;
-    height: 61px;
-  }
-
   .logos-container:first-child {
     margin-bottom: 20px;
   }
@@ -74,8 +69,8 @@
 
     <section id="address-container">
       <section class="address-items">
-        <img class="logos-container" src="../assets/imgs/logo-pet.png" alt="PET Computação logo" /><br>
-        <img class="logos-container" src="../assets/imgs/logo-ufc.png" alt="UFC logo">
+        <img src="../assets/imgs/logo-pet.png" alt="PET Computação logo" /><br>
+        <img src="../assets/imgs/logo-ufc.png" alt="UFC logo">
       </section>
 
       <section class="address-items">
