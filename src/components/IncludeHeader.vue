@@ -44,7 +44,7 @@
 <template>
   <header id="include-header">
     <router-link class="logo" to="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" preserveAspectRatio="xMidyMid meet">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310">
         <g class="logo-group">
           <g class="top-triangle">
             <polygon fill="#E31F21" points="50.3,60.5 117.8,71.5 140.9,136.5" />
