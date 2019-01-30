@@ -5,6 +5,7 @@
 
   #schedule-container h1 {
     margin: 20px 0;
+    font-size: 3em;
   }
 
   .schedule-navbar {

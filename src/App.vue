@@ -1,6 +1,6 @@
 <style>
   @import url("./assets/css/default.css");
-  #start, #app {
+  #app {
     height: 100vh;
     max-width: 2000px;
   }
@@ -22,13 +22,7 @@
 </style>
 
 <template>
-  <section v-if="isBegin" id="start">
-    <IncludeTitle />
-    <p>O evento feito para você, calouro!</p>
-    <a @click="changeBeginState">Iniciar</a>
-  </section>
-
-  <section v-else id="app">
+  <section id="app">
     <IncludeHeader id="include-header" />
     <main id="include-main">
       <router-view></router-view>
@@ -38,21 +32,13 @@
 </template>
 
 <script>
-import IncludeTitle from '@/components/IncludeTitle.vue';
 import IncludeHeader from '@/components/IncludeHeader.vue';
 import IncludeFooter from '@/components/IncludeFooter.vue';
 
 export default {
   components: {
-    IncludeTitle,
     IncludeHeader,
     IncludeFooter,
-  },
-
-  data() {
-    return {
-      isBegin: false,
-    };
   },
 
   methods: {

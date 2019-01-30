@@ -31,9 +31,6 @@
     transform: translate(2%, -2%);
   }
 
-  .triangle-one {fill:#E3E9DA}
-  .triangle-two {fill:#888C88}
-
   /* logo img rules end */
 
   #include-header, .nav {
@@ -50,16 +47,16 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" preserveAspectRatio="xMidyMid meet">
         <g class="logo-group">
           <g class="top-triangle">
-            <polygon class="triangle-one" points="50.3,60.5 117.8,71.5 140.9,136.5" />
-            <polygon class="triangle-two" points="117.8,71.5 163.5,22.5 140.9,136.5" />
+            <polygon fill="#E31F21" points="50.3,60.5 117.8,71.5 140.9,136.5" />
+            <polygon fill="#A01C1A" points="117.8,71.5 163.5,22.5 140.9,136.5" />
           </g>
           <g class="right-triangle">
-            <polygon class="triangle-one" points="287.5,126.5 242.8,177 173.6,162.5" />
-            <polygon class="triangle-two" points="242.8,177 262.3,240.3 173.6,162.5" />
+            <polygon fill="#4F87C5" points="287.5,126.5 242.8,177 173.6,162.5" />
+            <polygon fill="#3C4D9B" points="242.8,177 262.3,240.3 173.6,162.5" />
           </g>
           <g class="left-triangle">
-            <polygon class="triangle-one" points="112.2,287.5 88.9,224.9 135.9,173.4" />
-            <polygon class="triangle-two" points="88.9,224.9 22.5,210.3 135.9,173.4" />
+            <polygon fill="#F1E747" points="112.2,287.5 88.9,224.9 135.9,173.4" />
+            <polygon fill="#F49B45" points="88.9,224.9 22.5,210.3 135.9,173.4" />
           </g>
         </g>
       </svg>
@@ -80,7 +77,7 @@ export default {
   data() {
     return {
       navItems: [
-        { path: '/', name: 'Include', },
+        { path: '/', name: 'Include' },
         { path: '/schedule/wednesday', name: 'Programação' },
         { path: '/map', name: 'Mapa' },
       ],

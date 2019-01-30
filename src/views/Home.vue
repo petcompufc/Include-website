@@ -26,7 +26,7 @@
     color: rgb(214,214,214);
   }
 
-  article h1 { margin: 50px 0 }
+  article h1 { margin: 50px 0; font-size: 3em }
   article p { text-align: justify; }
 
   /* activities rules */
@@ -44,7 +44,7 @@
     padding: 20px;
     border-radius: 5px;
     transition: background-color .4s ease;
-    font-size: .9em;
+    font-size: 1.2em;
     text-align: center;
   }
 

@@ -51,6 +51,11 @@
     margin-bottom: 20px;
   }
 
+  .social-media-icons {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+  }
+
   /* copyright rules */
   #copyright-container p {
     text-align: center;
@@ -77,10 +82,11 @@
         <h1>{{ address.title }}</h1>
         <address v-html="addressInfo"></address>
         <section class="social-media-container">
-          <a :href="website.url" target="_blank">{{ website.name }}</a><br/>
+          <a :href="website.url" target="_blank">{{ website.name }}</a><br>
           <a v-for="sm in socialMedia"
             :key="sm.id"
             :href="sm.url"
+            class="social-media-icons"
             target="_blank"
           >
             <img :src="sm.src" :alt="sm.name" />
