@@ -107,8 +107,8 @@
           </ul>
           <ul class="sm-list">
             <li>
-              <a href="https://www.facebook.com/PETCompUFC/" target="_blank">
-                <img src="../assets/imgs/social-media/fb-cc-logo.png" alt="Logo vermelha do Facebook">
+              <a href="https://www.facebook.com/pettelecomufc/" target="_blank">
+                <img src="../assets/imgs/social-media/fb-et-logo.png" alt="Logo vermelha do Facebook">
               </a>
             </li>
             <li>
