@@ -41,8 +41,8 @@
       </colgroup>
       <tbody class="schedule-table-body">
         <tr
-          v-for="rout in routine"
-          :key="rout.id"
+          v-for="(rout, index) in routine"
+          :key="index"
           @click="showInfo(rout)"
         >
           <td>{{ rout.hour }}</td>
@@ -53,7 +53,10 @@
 
     <IncludeModal v-if="isModalVisible" @close="closeInfo">
       <h1 slot="header">{{ modalInfo.activity }}</h1>
-      <p slot="body">{{ modalInfo.description }}</p>
+      <template slot="body">
+        <h1>{{ modalInfo.hour }}</h1>
+        <p>{{ modalInfo.description }}</p>
+      </template>
     </IncludeModal>
   </section>
 </template>

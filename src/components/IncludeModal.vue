@@ -46,9 +46,13 @@
     text-decoration: underline;
   }
 
+  .modal-body h1 {
+    margin: 20px;
+  }
+
   .modal-body p {
     max-width: 300px;
-    margin: 50px;
+    margin: 10px 50px 50px;
   }
 
   .modal-body ul {

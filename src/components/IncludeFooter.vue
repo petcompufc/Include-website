@@ -46,10 +46,9 @@
     margin-bottom: 20px;
   }
 
-  .social-media-icons {
-    display: inline-block;
-    margin: 10px 10px 0 0;
-  }
+  .sm-list, .sm-list li { display: inline-block; }
+  .sm-list { margin-right: 2px; }
+  .sm-list li { margin: 4px 2px; }
 
   /* copyright rules */
   #copyright-container p {
@@ -63,8 +62,8 @@
 <template>
   <footer>
     <section id="contributing-container">
-      <img :src="contributing.src" alt="github logo" />
-      <a :href="contributing.url" target="_blank">{{ contributing.text }}</a>
+      <img src="../assets/imgs/social-media/github-logo.png" alt="github logo" />
+      <a href="https://github.com/petcompufc/Include-website" target="_blank">Ajude-nos a melhorar!</a>
     </section>
 
     <section id="address-container">
@@ -74,78 +73,67 @@
       </section>
 
       <section class="address-items">
-        <h1>{{ address.title }}</h1>
-        <address v-html="addressInfo"></address>
+        <h1>PET Computação</h1>
+        <address>
+          Av. Humberto Monte, s/n<br>
+          UFC - Campus do Pici<br>
+          PET Computação\nBloco 910
+        </address>
         <section class="social-media-container">
-          <a :href="website.url" target="_blank">{{ website.name }}</a><br>
-          <a v-for="sm in socialMedia"
-            :key="sm.id"
-            :href="sm.url"
-            class="social-media-icons"
-            target="_blank"
-          >
-            <img :src="sm.src" :alt="sm.name" />
-          </a>
+          <a href="http://www.petcomp.ufc.br" target="_blank">petcomp@ufc.br</a><br>
+          <ul class="sm-list">
+            <li>
+              <a href="https://www.facebook.com/PETCompUFC/" target="_blank">
+                <img src="../assets/imgs/social-media/fb-cc-logo.png" alt="Logo vermelha do Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/petcompufc/" target="_blank">
+                <img src="../assets/imgs/social-media/instagram-cc-logo.png" alt="Logo vermelha do Instagram">
+              </a>
+            </li>
+          </ul>
+          <ul class="sm-list">
+            <li>
+              <a href="https://www.facebook.com/PET-Eng-Comp-336280073590849/" target="_blank">
+                <img src="../assets/imgs/social-media/fb-ec-logo.png" alt="Logo azul do Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/petufc.engcomp/" target="_blank">
+                <img src="../assets/imgs/social-media/instagram-ec-logo.png" alt="Logo azul do Instagram">
+              </a>
+            </li>
+          </ul>
+          <ul class="sm-list">
+            <li>
+              <a href="https://www.facebook.com/PETCompUFC/" target="_blank">
+                <img src="../assets/imgs/social-media/fb-cc-logo.png" alt="Logo vermelha do Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/pettelecom/" target="_blank">
+                <img src="../assets/imgs/social-media/instagram-et-logo.png" alt="Logo amarela do Instagram">
+              </a>
+            </li>
+          </ul>
         </section>
       </section>
 
       <section class="address-items">
         <h1>Links</h1>
         <ul>
-          <li v-for="link in ufcLinks" :key="link.id">
-            <a :href="link.url" target="_blank">{{ link.name }}</a>
-          </li>
+          <li><a href="http://www.ufc.br/" target="_blank">Portal UFC</a></li>
+          <li><a href="http://portal.dc.ufc.br/" target="_blank">Departamento de Computação</a></li>
+          <li><a href="http://cc.ufc.br/" target="_blank">Curso de Ciência da Computação</a></li>
+          <li><a href="http://www.engcomp.ufc.br/" target="_blank">Curso de Engenharia da Computação</a></li>
+          <li><a href="http://www.telecom.ufc.br/" target="_blank">Curso de Engenharia de Telecomunicações</a></li>
         </ul>
       </section>
     </section>
 
     <section id="copyright-container">
-      <p><small>{{ copyright }}</small></p>
+      <p><small>© 2019 PET Computação UFC, Todos os direitos reservados.</small></p>
     </section>
-
   </footer>
 </template>
-
-<script>
-import contactInfos from '../models/contacts';
-
-export default {
-  data() {
-    return {
-      address: contactInfos.address,
-      links: contactInfos.links,
-      copyright: contactInfos.copyright,
-    };
-  },
-
-  computed: {
-    contributing() {
-      const gh = this.links
-        .find(elem => elem.id === 'ghsite');
-
-      return Object.assign(gh, { text: contactInfos.contributing });
-    },
-
-    addressInfo() {
-      return this.address
-        .text
-        .replace(/\n/g, '<br/>');
-    },
-
-    socialMedia() {
-      return this.links
-        .filter(elem => elem.id !== 'ghsite' && elem.src !== '');
-    },
-
-    website() {
-      return this.links
-        .find(elem => elem.id === 'petsite');
-    },
-
-    ufcLinks() {
-      return this.links
-        .filter(elem => elem.src === '' && elem.id !== 'petsite');
-    },
-  },
-};
-</script>
