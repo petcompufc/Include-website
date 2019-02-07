@@ -1,10 +1,34 @@
 <style scoped>
   #schedule-container {
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
+  .list-course {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .list-course li {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 20px 0;
+    max-width: 300px;
+    background-color: rgb(13,37,76);
+    color: rgb(255,255,255);
+    border-radius: 30px 0 30px 0;
+    transition: background-color .8s ease;
+  }
+
+  .list-course li:nth-child(1):hover { background-color: rgb(161, 29, 27) }
+  .list-course li:nth-child(2):hover { background-color: rgb(60, 77, 155) }
+  .list-course li:nth-child(3):hover { background-color: rgb(244, 155, 69) }
+
   #schedule-container h1 {
-    margin: 20px 0;
+    margin: 30px 0;
     font-size: 3em;
   }
 
@@ -49,6 +73,18 @@
     background-color: rgb(19, 52, 107);
   }
 
+  #schedule-content button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background-color: rgb(13,37,76);
+    border-radius: 30px;
+    color: rgb(255,255,255);
+    transition: background-color .3s ease;
+  }
+
+  #schedule-content button:hover { background-color: rgb(19, 52, 107) }
+
   @media (max-width: 788px) {
     .schedule-navbar ul {
       flex-direction: column;
@@ -66,7 +102,12 @@
 <template>
   <section id="schedule-container">
     <h1>Cronograma</h1>
-    <section id="schedule-content">
+    <ul v-if="!isCourse" class="list-course">
+      <li @click="chooseCourse('cc')">Ciência da Computação</li>
+      <li @click="chooseCourse('ec')">Engenharia da Computação</li>
+      <li @click="chooseCourse('et')">Engenharia de Telecomunicação</li>
+    </ul>
+    <section v-else id="schedule-content">
       <nav class="schedule-navbar">
         <ul>
           <li
@@ -80,6 +121,7 @@
         </ul>
       </nav>
       <IncludeSchedule :routine="routine"/>
+      <button @click="backToChooseCourse" >Escolher curso</button>
     </section>
   </section>
 
@@ -101,13 +143,15 @@ export default {
         { path: '/schedule/thursday', name: 'Segundo dia', selected: false },
         { path: '/schedule/friday', name: 'Terceiro dia', selected: false },
       ],
+      course: '',
+      isCourse: false,
     };
   },
 
   computed: {
     routine() {
       const { day } = this.$route.params;
-      return schedule[day];
+      return schedule[day].filter(elem => elem.type === 'all' || elem.type === this.course);
     },
   },
 
@@ -117,6 +161,15 @@ export default {
       selectedItem.selected = false;
       const newSelectedItem = this.navItems.find(elem => elem.name === item.name);
       newSelectedItem.selected = true;
+    },
+
+    chooseCourse(type) {
+      this.course = type;
+      this.isCourse = true;
+    },
+
+    backToChooseCourse() {
+      this.isCourse = false;
     },
   },
 };
