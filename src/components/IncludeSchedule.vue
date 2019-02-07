@@ -1,7 +1,7 @@
 <style scoped>
   /* general rules */
   .schedule-table {
-    font-size: 1.2em;
+    font-size: 1.8em;
     table-layout: fixed;
     width: 95%;
     margin: 0 auto;
@@ -10,12 +10,13 @@
   }
 
   #first-column {
-    width: 20%;
+    width: 100px;
   }
 
   .schedule-table-body tr {
     transition: all .2s ease-in;
     cursor: pointer;
+    height: 80px;
   }
 
   .schedule-table-body tr:nth-child(2n+1) {
