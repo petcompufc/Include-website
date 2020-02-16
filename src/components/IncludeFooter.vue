@@ -93,30 +93,6 @@
               </a>
             </li>
           </ul>
-          <ul class="sm-list">
-            <li>
-              <a href="https://www.facebook.com/PET-Eng-Comp-336280073590849/" target="_blank">
-                <img src="../assets/imgs/social-media/fb-ec-logo.png" alt="Logo azul do Facebook">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/petufc.engcomp/" target="_blank">
-                <img src="../assets/imgs/social-media/instagram-ec-logo.png" alt="Logo azul do Instagram">
-              </a>
-            </li>
-          </ul>
-          <ul class="sm-list">
-            <li>
-              <a href="https://www.facebook.com/pettelecomufc/" target="_blank">
-                <img src="../assets/imgs/social-media/fb-et-logo.png" alt="Logo vermelha do Facebook">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/pettelecom/" target="_blank">
-                <img src="../assets/imgs/social-media/instagram-et-logo.png" alt="Logo amarela do Instagram">
-              </a>
-            </li>
-          </ul>
         </section>
       </section>
 
@@ -126,8 +102,6 @@
           <li><a href="http://www.ufc.br/" target="_blank">Portal UFC</a></li>
           <li><a href="http://portal.dc.ufc.br/" target="_blank">Departamento de Computação</a></li>
           <li><a href="http://cc.ufc.br/" target="_blank">Curso de Ciência da Computação</a></li>
-          <li><a href="http://www.engcomp.ufc.br/" target="_blank">Curso de Engenharia da Computação</a></li>
-          <li><a href="http://www.telecom.ufc.br/" target="_blank">Curso de Engenharia de Telecomunicações</a></li>
         </ul>
       </section>
     </section>
