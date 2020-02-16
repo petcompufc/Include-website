@@ -77,7 +77,8 @@
         <address>
           Av. Humberto Monte, s/n<br>
           UFC - Campus do Pici<br>
-          PET Computação\nBloco 910
+          Centro de Ciências<br>
+          Bloco 910
         </address>
         <section class="social-media-container">
           <a href="http://www.petcomp.ufc.br" target="_blank">petcomp@ufc.br</a><br>
@@ -107,7 +108,7 @@
     </section>
 
     <section id="copyright-container">
-      <p><small>© 2019 PET Computação UFC, Todos os direitos reservados.</small></p>
+      <p><small>© 2020 PET Computação UFC, Todos os direitos reservados.</small></p>
     </section>
   </footer>
 </template>
