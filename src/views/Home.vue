@@ -96,7 +96,7 @@
     <article>
       <section id="what-is-container">
         <IncludeTitle />
-        <p>O Include é um evento feito para você que esta ingressando nos cursos de Ciência da Computação, Engenharia da Computação e Engenharia de Telecomunicações e gostaria de conhecer um pouco mais sobre o Campus e as atividades realizada pelo seu curso.</p>
+        <p>O Include é um evento feito para você que esta ingressando no curso de Ciência da Computação e gostaria de conhecer um pouco mais sobre o Campus e as atividades realizada pelo seu curso.</p>
       </section>
     </article>
 
