@@ -30,7 +30,7 @@
   }
 
   article h1 { margin: 50px 0; font-size: 3em }
-  article p { text-align: justify; }
+  article p { text-align: left; }
 
   /* activities rules */
 
@@ -124,14 +124,6 @@
     </article>
 
     <article>
-      <section id="participants-container">
-        <h1>Organizadores</h1>
-        <p>Nós, PET Computação em parceria com os PET de Engenharia da Computação e Engenharia de Telecomunicação organizamos esse evento especialmente para você, calouro desses cursos.</p>
-        <IncludeEggs :teams="teams" />
-      </section>
-    </article>
-
-    <article>
       <section id="workshops-container">
         <h1>Workshops</h1>
         <ul class="workshops-list">
@@ -164,12 +156,10 @@
 </template>
 
 <script>
-import IncludeEggs from '@/components/IncludeEggs.vue';
 import IncludeTitle from '@/components/IncludeTitle.vue';
 
 export default {
   components: {
-    IncludeEggs,
     IncludeTitle,
   },
   data() {

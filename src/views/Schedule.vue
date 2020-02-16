@@ -102,27 +102,17 @@
 <template>
   <section id="schedule-container">
     <h1>Cronograma</h1>
-    <ul v-if="!isCourse" class="list-course">
-      <li @click="chooseCourse('cc')">Ciência da Computação</li>
-      <li @click="chooseCourse('ec')">Engenharia da Computação</li>
-      <li @click="chooseCourse('et')">Engenharia de Telecomunicação</li>
-    </ul>
-    <section v-else id="schedule-content">
-      <nav class="schedule-navbar">
-        <ul>
-          <li
-            v-for="(item, index) in navItems"
-            :key="index"
-            :class="{ selected: item.selected }"
-            @click="changeSelectedItem(item)"
-          >
-            <router-link :to="item.path">{{ item.name }}</router-link>
-          </li>
-        </ul>
-      </nav>
-      <IncludeSchedule :routine="routine"/>
-      <button @click="backToChooseCourse" >Escolher curso</button>
-    </section>
+    <nav class="schedule-navbar">
+      <ul>
+        <li
+          v-for="(item, index) in navItems"
+          :key="index"
+          @click="changeSelectedItem(item)">
+          <router-link :to="item.path">{{ item.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+    <IncludeSchedule :routine="routine"/>
   </section>
 
 </template>
@@ -143,7 +133,6 @@ export default {
         { path: '/schedule/thursday', name: 'Segundo dia', selected: false },
         { path: '/schedule/friday', name: 'Terceiro dia', selected: false },
       ],
-      course: '',
       isCourse: false,
     };
   },

@@ -10,7 +10,7 @@
   }
 
   #first-column {
-    width: 100px;
+    width: 12ch;
   }
 
   .schedule-table-body tr {

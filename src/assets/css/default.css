@@ -17,7 +17,7 @@ body {
 }
 
 /* h1 { font-size: 2.5em;} */
-p { text-align: justify }
+p { text-align: left }
 h1 { text-align: center }
 a { text-decoration: none;}
 ul { list-style: none }

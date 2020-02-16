@@ -8,8 +8,6 @@ import foodTwo from '../assets/imgs/points/food2.png';
 import foodThree from '../assets/imgs/points/food3.png';
 import foodFour from '../assets/imgs/points/food4.png';
 import blockOne from '../assets/imgs/points/block1.png';
-import blockTwo from '../assets/imgs/points/block2.png';
-import blockThree from '../assets/imgs/points/block3.png';
 import xerox from '../assets/imgs/points/xerox.png';
 
 const locations = [
@@ -30,7 +28,7 @@ const locations = [
   {
     id: 'library1',
     name: 'Biblioteca Central',
-    description: 'Biblioteca Central do Campus do Pici.',
+    description: 'Biblioteca Central do Campus do Pici. Também chamada de BCT: Biblioteca de Ciências e Tecnologia',
     latLong: [-3.742523, -38.574298],
     icon: libraryOne,
   },
@@ -52,7 +50,7 @@ const locations = [
   },
   {
     id: 'food1',
-    name: 'Restaurante Universitário Velho',
+    name: 'Restaurante Universitário - Prédio Velho',
     description: 'RU velho. Almoço e Janta por R$ 1,10.',
     latLong: [-3.744898, -38.572963],
     icon: foodOne,
@@ -60,7 +58,7 @@ const locations = [
   },
   {
     id: 'food2',
-    name: 'Restaurante Universitário Novo',
+    name: 'Restaurante Universitário - Prédio Novo',
     description: 'RU novo. Almoço e Janta por R$ 1,10.',
     latLong: [-3.747110, -38.577976],
     icon: foodTwo,
@@ -83,23 +81,9 @@ const locations = [
   {
     id: 'block1',
     name: 'Departamento de Computação',
-    description: 'Aqui se encontra os LECs e a sala dos professores.',
+    description: 'Aqui se encontram os LECs e a sala dos professores.',
     latLong: [-3.745978, -38.574143],
     icon: blockOne,
-  },
-  {
-    id: 'block2',
-    name: 'Bloco 707',
-    description: 'Aqui o pessoal da telecomunicações tem aula. o/',
-    latLong: [-3.743457, -38.575821],
-    icon: blockTwo,
-  },
-  {
-    id: 'block3',
-    name: 'Bloco 725',
-    description: 'Aqui o pessoal da tele e eng. Comp tem aula. o/',
-    latLong: [-3.744924, -38.578122],
-    icon: blockThree,
   },
   {
     id: 'xerox',

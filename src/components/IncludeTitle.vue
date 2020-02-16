@@ -11,7 +11,7 @@
   .u {stroke-dasharray: 453;stroke-dashoffset: 453;}
   .d {stroke-dasharray: 601;stroke-dashoffset: 601;}
   .e {stroke-dasharray: 557;stroke-dashoffset: 557;}
-  .i, .n, .c, .l, .u, .d, .e {animation: draw 8s linear forwards;}
+  .i, .n, .c, .l, .u, .d, .e {animation: draw 2s linear forwards;}
 </style>
 
 <template>
