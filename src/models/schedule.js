@@ -1,7 +1,7 @@
 const schedule = {
   wednesday: [
     {
-      hour: '8:20 - 9:00',
+      hour: '8:10 - 9:00',
       activity: 'Apresentação do evento e do PET Comp',
       description: 'Saiba mais sobre o Include e sobre o PET Comp, que organiza o Include',
     },
@@ -61,7 +61,7 @@ const schedule = {
     },
     {
       hour: '9:10 - 10:00',
-      activity: 'Mobills',
+      activity: 'Mobills: startup e intra empreendedorismo',
       description: 'Uma palestra da startup Mobills, criadora de um gerenciador financeiro com mais de 5 milhões de downloads na Play Store',
     },
     {
