@@ -1,5 +1,7 @@
 # include
 
+[![Run on Repl.it](https://repl.it/badge/github/petcompufc/Include-website)](https://repl.it/github/petcompufc/Include-website)
+
 Include is an event organized by PET Computação to introduce UFC to new students.
 
 ## Build
