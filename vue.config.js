@@ -11,4 +11,11 @@ module.exports = {
         return args;
       });
   },
+  devServer: {
+    allowedHosts: [
+      ".repl.it",
+      ".repl.co",
+      ".repl.run"
+    ]
+  }
 };
